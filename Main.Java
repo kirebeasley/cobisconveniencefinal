@@ -82,10 +82,10 @@ public class Main {
                             co.setProdprice(cppr);
                             order.add(co);
 
-                            inventory.get(i).setInventory(inventory.get(i).getInventory() + 1);//increments inventory sold totals
+                            inventory.get(i).setInventory(inventory.get(i).getInventory() + 1);
 
-                            newreceipt.setCost(newreceipt.getCost() + inventory.get(index).getPrice());//increments each customers receipt total costs
-                            newreceipt.addCustomerorders(co);//add order list to customers receipt
+                            newreceipt.setCost(newreceipt.getCost() + inventory.get(index).getPrice());
+                            newreceipt.addCustomerorders(co);
                         }
                     }
                 } while (!product.equals("finished"));
@@ -96,9 +96,9 @@ public class Main {
         System.out.println("Closing Receipts:");
 
         for (int i = 0; i < receipts.size(); i++) {
-            System.out.println(receipts.get(i).getCustname());//print customers name
-            for (int j = 0; j < receipts.get(i).getCustomerorders().size(); j++) { //loop through that customers orders
-                System.out.println(receipts.get(i).getCustomerorders().get(j).getProdpurch());//print each item they ordered
+            System.out.println(receipts.get(i).getCustname());
+            for (int j = 0; j < receipts.get(i).getCustomerorders().size(); j++) {
+                System.out.println(receipts.get(i).getCustomerorders().get(j).getProdpurch());
             }
             System.out.println(receipts.get(i).getCost());
             System.out.println("-------------");
@@ -118,6 +118,10 @@ public class Main {
         System.out.println("Grand Total" + ": " + totalcost);
         }
     }
+
+
+
+
 
 
 
