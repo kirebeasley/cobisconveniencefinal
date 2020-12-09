@@ -1,3 +1,7 @@
+package com.company;
+
+import java.util.ArrayList;
+
 public class Receipt {
     String custname;
     double cost;
